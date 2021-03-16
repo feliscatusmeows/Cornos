@@ -24,25 +24,25 @@ public class Scan extends Command {
     public void onExecute(String[] args) {
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase("cancel")) {
-                ClientHelper.sendChat("Cancelled all scans");
                 PortScannerManager.killAllScans();
+                ClientHelper.sendChat("Cancelled all scans");
                 return;
             }
         }
         if (args.length < 5) {
-            ClientHelper.sendChat("I'd appreciate you giving me an ip, port min, port max, thread amount and delay between scans");
+            ClientHelper.sendChat("Usage: scan ip minPort maxPort threads delay");
             ClientHelper.sendChat("Example: scan localhost 0 65535 5 3");
             return;
         }
         if (!ClientHelper.isIntValid(args[1]) || !ClientHelper.isIntValid(args[2]) || !ClientHelper.isIntValid(args[3]) || !ClientHelper.isIntValid(args[4])) {
-            ClientHelper.sendChat("Homie check the numbers");
+            ClientHelper.sendChat("The ports, threads, and delay must be a valid number");
             return;
         }
         InetAddress addr;
         try {
             addr = InetAddress.getByName(args[0]);
         } catch (Exception exc) {
-            ClientHelper.sendChat("idk if thats a valid address ngl");
+            ClientHelper.sendChat("That appears to be an invalid ip address");
             return;
         }
         ClientHelper.sendChat("Started scanning " + args[0]);
