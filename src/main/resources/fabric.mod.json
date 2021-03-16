@@ -3,13 +3,13 @@
   "id": "ccl",
   "version": "${version}",
   "name": "Cornos",
-  "description": "swag client",
+  "description": "swag fabric utility mod",
   "authors": [
     "ConstantinDev"
   ],
   "contributors": [],
   "contact": {},
-  "license": "MIT",
+  "license": "GNU General Public License v3.0",
   "icon": "assets/ccl/icon.png",
   "environment": "client",
   "entrypoints": {
