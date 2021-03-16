@@ -12,7 +12,7 @@ import me.constantindev.ccl.etc.base.Module;
 
 public class ByteSizeViewer extends Module {
     public ByteSizeViewer() {
-        super("ByteSizeViewer", "Allows you to see the size of an item in bytes");
+        super("ByteSizeViewer", "Allows you to see the size of an item in bytes, currently doesn't do anything. ");
         //Cornos.minecraft.player.inventory.getStack(1).getTooltip()
     }
     // ByteSizeViewerHandler.java
