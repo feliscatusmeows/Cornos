@@ -19,7 +19,7 @@ public class Leave extends Command {
 
     @Override
     public void onExecute(String[] args) {
-        MinecraftClient.getInstance().getNetworkHandler().onDisconnected(Text.of("Imagine quitting smh"));
+        MinecraftClient.getInstance().getNetworkHandler().onDisconnected(Text.of("Disconnect triggered by cornos command"));
         super.onExecute(args);
     }
 }
