@@ -19,7 +19,7 @@ public class Help extends Command {
     @Override
     public void onExecute(String[] args) {
         if (args.length == 0) {
-            ClientHelper.sendChat("Please either run this with modules or commands as 1st argument.");
+            ClientHelper.sendChat("You can do help modules to see a list of modules or you can do help commands to see a list of commands. ");
         } else {
             switch (args[0]) {
                 case "modules":
@@ -37,7 +37,7 @@ public class Help extends Command {
                     });
                     break;
                 default:
-                    ClientHelper.sendChat("Please either run this with modules or commands as 1st argument.");
+                    ClientHelper.sendChat("You can do help modules to see a list of modules or you can do help commands to see a list of commands. ");
                     break;
             }
         }
