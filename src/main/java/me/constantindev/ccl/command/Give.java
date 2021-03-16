@@ -24,7 +24,7 @@ public class Give extends Command {
             return;
         }
         if (args.length == 0) {
-            ClientHelper.sendChat("Usage: }give <Item>{nbt} <amount>");
+            ClientHelper.sendChat("Usage: }give <Item>{nbt} <amount>");//TODO make it look at prefix and use the actual prefix
             return;
         }
 
@@ -35,7 +35,7 @@ public class Give extends Command {
         try {
             itemStackArgument = itemStackArgumentType.parse(new StringReader(args[0]));
         } catch (CommandSyntaxException e) {
-            ClientHelper.sendChat("\u00A7cError: Invalid item.");
+            ClientHelper.sendChat("\u00A7cError: That is not a minecraft item that I know about.");
             return;
         }
 
