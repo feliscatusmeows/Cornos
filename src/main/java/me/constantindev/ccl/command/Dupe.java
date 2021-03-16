@@ -38,7 +38,11 @@ public class Dupe extends Command {
                 break;
             case "11/11":
                 Cornos.minecraft.player.dropSelectedItem(true);
-                Objects.requireNonNull(Cornos.minecraft.getNetworkHandler()).getConnection().disconnect(Text.of("bruh"));
+                Objects.requireNonNull(Cornos.minecraft.getNetworkHandler()).getConnection().disconnect(Text.of("Disconnected to attempt 11/11 dupe"));
+                break;
+            default:
+                ClientHelper.sendChat("I do not know how to do the " + args[0] + " dupe, contact the developer if you want it to be added");
+                break;
         }
         super.onExecute(args);
     }
