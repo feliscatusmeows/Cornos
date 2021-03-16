@@ -10,8 +10,8 @@ package me.constantindev.ccl.module.ext;
 
 import me.constantindev.ccl.etc.base.Module;
 
-public class NoRender extends Module {
+public class NoRender extends Module {//TODO rename to NoSignRender or add more options
     public NoRender() {
-        super("NoSignRender", "Doesn't render signs");
+        super("NoSignRender", "Doesn't render signs, currently doesn't do anything");
     }
 }
