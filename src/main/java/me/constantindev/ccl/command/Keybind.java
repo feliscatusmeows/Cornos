@@ -15,7 +15,7 @@ public class Keybind extends Command {
     @Override
     public void onExecute(String[] args) {
         if (args.length == 0) {
-            ClientHelper.sendChat("All binds rn:");
+            ClientHelper.sendChat("All binds:");
             KeyBindManager.binds.forEach((s, keyBind) -> ClientHelper.sendChat("  " + s + " -> " + ((char) keyBind.keycode)));
         } else if (args.length == 1) {
             String modname = args[0];

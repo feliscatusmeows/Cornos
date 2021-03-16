@@ -57,7 +57,7 @@ public class Flight extends Module {
                 }
                 break;
             default:
-                ClientHelper.sendChat("Invalid flight mode. Please pick one of vanilla, static.");
+                ClientHelper.sendChat("Invalid flight mode. Please pick vanilla, static, or jetpack");
                 this.mconf.getByName("mode").setValue("vanilla");
                 break;
         }

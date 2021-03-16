@@ -12,6 +12,7 @@ import me.constantindev.ccl.etc.base.Module;
 
 public class NoArmorstandRender extends Module {
     public NoArmorstandRender() {
-        super("NoStandRender", "Doesn't render armor stands");
+        super("NoStandRender", "Doesn't render armor stands, currently doesn't do anything. ");
+        //wait what about gravity block lag machines or something
     }
 }

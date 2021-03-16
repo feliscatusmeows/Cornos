@@ -9,7 +9,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class Jesus extends Module {
     public Jesus() {
-        super("Jesus", "Yisus.", MType.MOVEMENT);
+        super("Jesus", "Allows you to walk on liquids. ", MType.MOVEMENT);
         this.mconf.add(new MultiOption("mode", "jump", new String[]{"jump", "velocity", "vanilla", "dontfall"}));
     }
 

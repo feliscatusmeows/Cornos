@@ -46,7 +46,7 @@ public class AutoSign extends Module {
                                 "cornos is just",
                                 "the best client",
                                 "to ever exist",
-                                "its true"
+                                "it's true"
                         };
                         break;
                     case "longlines":

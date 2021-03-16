@@ -14,12 +14,12 @@ public class Toggle extends Command {
     public void onExecute(String[] args) {
         //ClientHelper.sendChat(String.join(" ",args));
         if (args.length == 0) {
-            ClientHelper.sendChat("Module not found bruh");
+            ClientHelper.sendChat("It looks like you were cut off");
             return;
         }
         Module m = ModuleRegistry.getByName(args[0]);
         if (m == null) {
-            ClientHelper.sendChat("Module not found bruh");
+            ClientHelper.sendChat("That isn't a module in Cornos");
             return;
         }
         m.isOn.toggle();

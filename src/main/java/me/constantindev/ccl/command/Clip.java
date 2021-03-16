@@ -5,7 +5,7 @@
 # Created by constantin at 17:46, Feb 28 2021
 PLEASE READ THE COPYRIGHT NOTICE IN THE PROJECT ROOT, IF EXISTENT
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-*/
+*///helo i like catnip meow
 package me.constantindev.ccl.command;
 
 import me.constantindev.ccl.Cornos;
@@ -23,7 +23,7 @@ public class Clip extends Command {
     @Override
     public void onExecute(String[] args) {
         if (args.length == 0) {
-            ClientHelper.sendChat("i need some arguments like \"v\" or \"h\" ygm");
+            ClientHelper.sendChat("Usage: clip v/h distance");
             return;
         }
         assert Cornos.minecraft.player != null;
@@ -32,12 +32,12 @@ public class Clip extends Command {
         switch (args[0].toLowerCase()) {
             case "v":
                 if (args.length == 1) {
-                    ClientHelper.sendChat("Please gimme a number as 2nd arg");
+                    ClientHelper.sendChat("You need to tell me how many blocks to clip up/down");
                     failedAttempts = 1;
                     break;
                 }
                 if (!ClientHelper.isIntValid(args[1])) {
-                    ClientHelper.sendChat(failedAttempts == 1 ? "homie i said a number" : (failedAttempts == 2 ? "DUDE" : "can i get a valid number as 2nd arg"));
+                    ClientHelper.sendChat(failedAttempts == 1 ? "That isn't a number that I can read" : (failedAttempts == 2 ? "DUDE read what I put above" : "You have to do clip v (number)"));//oh god what is this i cant read aaaaaaaaaa
                     failedAttempts = 2;
                     break;
                 }
@@ -46,12 +46,12 @@ public class Clip extends Command {
                 break;
             case "h":
                 if (args.length == 1) {
-                    ClientHelper.sendChat("Please gimme a number as 2nd arg");
+                    ClientHelper.sendChat("You need to tell me how many blocks to clip forwards");
                     failedAttempts = 1;
                     break;
                 }
                 if (!ClientHelper.isIntValid(args[1])) {
-                    ClientHelper.sendChat(failedAttempts == 1 ? "homie i said a number" : (failedAttempts == 2 ? "DUDE" : "can i get a valid number as 2nd arg"));
+                    ClientHelper.sendChat(failedAttempts == 1 ? "That isn't a number that I can read" : (failedAttempts == 2 ? "DUDE read what I put above" : "You have to do clip h (number)"));
                     failedAttempts = 2;
                     break;
                 }
@@ -61,7 +61,7 @@ public class Clip extends Command {
                 np = new Vec3d(p.x + newv.x, p.y, p.z + newv.z);
                 break;
             default:
-                ClientHelper.sendChat("run the command w/o arguments and follow the instructions please");
+                ClientHelper.sendChat("Usage: clip v/h distance");
                 return;
         }
         Cornos.minecraft.player.updatePosition(np.x, np.y, np.z);
